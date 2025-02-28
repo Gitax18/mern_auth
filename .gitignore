@@ -1,0 +1,148 @@
+# Global ignores (apply to all directories including frontend/ and backend/)
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Build output
+build/
+dist/
+
+# Dependency directories
+node_modules/
+bower_components/
+jspm_packages/
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Caches
+.cache/
+.parcel-cache/
+.vitepress/cache/
+.vuepress/dist/
+.temp/
+.docusaurus/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Lint/Stylelint/Testing Cache
+.eslintcache
+.stylelintcache
+
+# REPL history
+.node_repl_history
+
+# Package archives
+*.tgz
+
+# Yarn
+.yarn-integrity
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE / Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional directories for popular tools
+.serverless/
+.dynamodb/
+.tern-port
+.vscode-test/
+
+# Logs and lockfiles in any subdirectory (frontend & backend)
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+
+# node_modules in any subdirectory (important for frontend and backend)
+**/node_modules/
+
+# Coverage in any subdirectory
+**/coverage/
+
+# Build artifacts in any subdirectory
+**/build/
+**/dist/
+
+# Cache directories
+**/.cache/
+**/.parcel-cache/
+**/.rpt2_cache/
+**/.rts2_cache_cjs/
+**/.rts2_cache_es/
+**/.rts2_cache_umd/
+**/.turbo/
+**/.next/
+**/.nuxt/
+**/.vite/
+
+# Lockfiles (optional but good for cleanliness if you use npm/yarn/pnpm differently across frontend/backend)
+frontend/package-lock.json
+frontend/yarn.lock
+frontend/pnpm-lock.yaml
+backend/package-lock.json
+backend/yarn.lock
+backend/pnpm-lock.yaml
+
+# Frontend-specific (React, Next.js, etc.)
+frontend/.next/
+frontend/.vercel/
+frontend/out/
+frontend/coverage/
+frontend/node_modules/
+frontend/.cache/
+frontend/.turbo/
+
+# Backend-specific (Express, Nest.js, etc.)
+backend/coverage/
+backend/node_modules/
+backend/.turbo/
+
+# Optional - you can remove these if your project doesn’t use them
+**/.firebase/
+**/.netlify/
+**/.vercel/
+
