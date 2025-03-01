@@ -44,11 +44,9 @@ exports.login = async (req, res) => {
 
     const isPasswordEqual = await bcrypt.compare(password, user.password);
     if (!isPasswordEqual) {
-      if (!user) {
-        return res
-          .status(403)
-          .json({ message: "User does not exist", success: false });
-      }
+      return res
+        .status(403)
+        .json({ message: "User does not exist", success: false });
     }
 
     const jwtToken = jwt.sign(
@@ -57,15 +55,13 @@ exports.login = async (req, res) => {
       { expiresIn: "12h" }
     );
 
-    res
-      .status(200)
-      .json({
-        message: "login successfully",
-        success: true,
-        jwtToken,
-        email,
-        name: user.name,
-      });
+    res.status(200).json({
+      message: "login successfully",
+      success: true,
+      jwtToken,
+      email,
+      name: user.name,
+    });
   } catch (error) {
     console.error(error);
     res
