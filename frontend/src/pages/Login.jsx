@@ -26,7 +26,7 @@ function Register() {
     }
 
     try {
-      const url = "http://localhost:3452/login";
+      const url = "/login";
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify({

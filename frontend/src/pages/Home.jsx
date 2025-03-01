@@ -19,7 +19,7 @@ function Home() {
 
   async function fetchProducts() {
     try {
-      const url = "http://localhost:3452/product";
+      const url = "/product";
       const response = await fetch(url, {
         headers: {
           Authorization: localStorage.getItem("jwtToken"),
@@ -48,7 +48,7 @@ function Home() {
         {products &&
           products.map((product) => {
             return (
-              <div>
+              <div key={product.id}>
                 <strong>{product.name}: </strong>
                 <span>${product.price}</span>
               </div>
